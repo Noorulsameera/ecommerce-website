@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Food Donation App</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Welcome to the Food Donation App</h2>
+            <p>Manage waste food and help those in need.</p>
+        </section>
+        
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <div id="user-dashboard">
+                <button onclick="showDonationForm()">Add Donation</button>
+                <button onclick="viewDonations()">View Donations</button>
+            </div>
+            <div id="donation-form" style="display: none;">
+                <h3>Add Donation</h3>
+                <form onsubmit="addDonation(event)">
+                    <label for="food-type">Food Type:</label>
+                    <input type="text" id="food-type" required>
+                    <label for="quantity">Quantity:</label>
+                    <input type="text" id="quantity" required>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="donations-list" style="display: none;">
+                <h3>Available Donations</h3>
+                <ul id="donations"></ul>
+            </div>
+        </section>
+        
+        <section id="donate">
+            <h2>Donate</h2>
+            <p>Help us reduce food waste by donating.</p>
+        </section>
+        
+        <section id="login">
+            <h2>Login</h2>
+            <form onsubmit="login(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
